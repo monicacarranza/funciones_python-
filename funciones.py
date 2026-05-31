@@ -7,9 +7,9 @@ def saludar(nombre):
 def convertir_a_fanhrenheit(c):
     return (c * 1.8) + 33
 
-#saludar("Jeymi")
-#saludar("Katya")
-#saludar("Yenifer")
+#saludar("monica")
+#saludar("Karla")
+#saludar("patricia")
 
 print(convertir_a_fanhrenheit(10))
 print(convertir_a_fanhrenheit(20))
