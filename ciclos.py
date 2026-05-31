@@ -14,7 +14,7 @@ print("Termino la interaccion")
 """"""
 
 
-for x in "Jeymi":
+for x in "monica":
     #print(x)
     
 while True:
