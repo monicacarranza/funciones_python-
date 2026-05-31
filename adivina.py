@@ -1,33 +1,30 @@
-nombre = input("Ingrese su nombre: ")
-apellido = input("Ingrese su apellido: ")
+import random
 
-nombre_completo = nombre + " " + apellido
+def tirar_datos():
+    return random.randint(3,13)
 
-print("Gracias por visitar nuestra tienda de teléfonos,", nombre_completo)
+def pedir_respuestas():
+    print("Ingresa tu prediccion")
+    print("1. par")
+    print("2. impar")
+    print("3. salir del juego")
+    
+    return int( input() )
 
-# Inventario de teléfonos
-inventario = {
-    "Samsung Galaxy A15": 150,
-    "iPhone 13": 140,
-    "Xiaomi Redmi Note 13":109,
-    "Motorola G54": 130
-}
+def imprimir_resultado(numero, prediccion):
+    es_par = numero % 2 == 0
+    if es_par and prediccion == 1:
+        print("Ganaste! Numero de os dados:", numero)
+    elif not es_par and prediccion == 2:
+        print("Ganaste! Numero de los dados:", numero)
+    else:
+        print("Perdiste! Numero de los dados:", numero)
 
-telefono_total = sum(inventario.values())
+while True:
+    numero = tirar_datos()
+    prediccion = pedir_respuestas()
+    if prediccion == 3:
+        break
+    imprimir_resultado(numero, prediccion)
 
-compras = {}
-
-def mostrar_menu():
-    print("")
-    print("==========================")
-    print("Selecciona la opción que deseas:")
-    print("1: Conocer cuántos teléfonos tiene la tienda")
-    print("2: Comprar un teléfono")
-    print("3: Mostrar compras")
-    print("4: Salir del programa")
-
-def mostrar_inventario():
-    print("***** INVENTARIO *****")
-    for llave, valor in inventario.items():
-        print(f"{llave}: {valor}")
-    print("En total tenemos", telefono_total, "teléfonos")
+print("Gracias por jugar")
