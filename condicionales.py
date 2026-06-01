@@ -1,9 +1,9 @@
 #Listas de elementos llave:valor
 #Arreglos asociativos
 
-persona = {"nombre": "Jeymi",
+persona = {"nombre": "monica",
            "edad": 20,
-           "apellido": "Zapata"}
+           "apellido": "carranza"}
 
 persona["apodo"] = "Ringa Tech"
 
